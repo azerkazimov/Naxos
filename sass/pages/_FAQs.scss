@@ -1,0 +1,88 @@
+.FAQ {
+    .faq-container {
+        border-bottom: 1px solid #ccc;
+
+        .faq-question {
+            @extend .py-5;
+            position: relative;
+            cursor: pointer;
+
+            h5 {
+                @extend .font-size-20;
+            }
+
+            h5,
+            i {
+                transition: all 0.3s;
+            }
+
+            &.active-question {
+                color: map-get($colors, primary);
+            }
+
+            &:hover {
+
+                h5,
+                i {
+                    color: map-get($colors, primary);
+                }
+            }
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.6s ease;
+
+            p {
+                @extend .py-3;
+                @extend .font-size-16;
+                color: map-get($colors, secondary);
+                line-height: 1.75;
+            }
+        }
+
+        &.faq-active {
+            .faq-question {
+                &.active-question {
+                    color: map-get($colors, primary);
+                }
+            }
+
+            .faq-answer {
+                max-height: 300px;
+                animation: fade 1s ease-in-out;
+            }
+
+            i {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .support-question {
+        color: map-get($colors, secondary);
+
+        a {
+            @extend .font-weight-bolder;
+            color: map-get($colors, primary);
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: map-get($colors, inky);
+            }
+        }
+    }
+
+    @keyframes fade {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}

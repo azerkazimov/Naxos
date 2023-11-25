@@ -1,0 +1,92 @@
+.testimonial {
+  width: 100%;
+
+  .testimonial-slick-track {
+    .testimonial-single-box {
+      display: none;
+      transition: all 0.9s linear;
+
+      .fas {
+        @extend .font-weight-900;
+        color: map-get($colors, primary);
+      }
+
+      p {
+        transition: all 0.9s linear;
+
+        @extend .font-weight-400;
+        color: map-get($colors, secondary);
+        transition: all 0.2s ease;
+        font-size: 25px;
+        line-height: 1.5em;
+        text-align: center;
+      }
+    }
+
+    .active-text {
+      display: block;
+    }
+  }
+
+  .testimonial-clients-track {
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 5));
+    overflow: hidden;
+    text-align: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .user-pic {
+      scroll-snap-align: center;
+      transition: all 0.3s ease;
+      border-radius: 50% !important;
+      width: 152px;
+      padding: 15px;
+      border: transparent;
+      opacity: 0.5;
+    }
+
+    .user-info {
+      display: none;
+    }
+
+    .active-pic {
+      border-radius: 50% !important;
+      width: 152px;
+      padding: 2px;
+      border: 2px solid map-get($colors, primary);
+      opacity: 1;
+    }
+
+    .active-info {
+      display: block;
+      text-align: center;
+
+      h3 {
+        @extend .font-size-16;
+      }
+
+      span {
+        @extend .mt-3;
+        color: map-get($colors, silvery);
+      }
+    }
+  }
+  .no-transition{
+    scroll-behavior: auto;
+  }
+  .dragging {
+    cursor: grab;
+    user-select: none;
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+  }
+}

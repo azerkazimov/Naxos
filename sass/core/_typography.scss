@@ -1,0 +1,19 @@
+//  generate fons size classes
+
+@each $key, $value in $font-sizes {
+  .font-size-#{$key} {
+    font-size: $value !important;
+  }
+}
+
+@for $i from 1 through 9 {
+  $weight: 100 + $i * 100;
+  $font-weights: map-merge($font-weights, (#{$weight}: #{$weight}));
+}
+
+//  generate fons weight classes
+@each $key, $value in $font-weights {
+  .font-weight-#{$key} {
+    font-weight: $value !important;
+  }
+}

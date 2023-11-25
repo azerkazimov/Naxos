@@ -1,0 +1,17 @@
+// Add bounce animation
+.bounce-effect {
+  position: relative;
+  animation: bounce-hero 3s infinite;
+}
+
+@keyframes bounce-hero {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: 25px;
+  }
+  100% {
+    top: 0px;
+  }
+}

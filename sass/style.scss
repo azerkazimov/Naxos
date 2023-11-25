@@ -1,0 +1,38 @@
+// import core variables and mixins
+@import "core/reset";
+@import "core/variables";
+@import "core/paddings";
+@import "core/margins";
+@import "core/grid";
+@import "core/flex";
+@import "core/colors";
+@import "core/typography";
+
+// import blocks
+@import "blocks/buttons";
+@import "blocks/inputs";
+
+// import components
+@import "components/cards";
+@import "components/header";
+@import "components/waves";
+@import "components/bounce";
+@import "components/slider";
+@import "components/section-header";
+@import "components/responsive";
+
+// import pages
+@import "pages/main";
+@import "pages/features";
+@import "pages/parallax";
+@import "pages/overview";
+@import "pages/testimonial";
+@import "pages/counter";
+@import "pages/team";
+@import "pages/screenshot";
+@import "pages/FAQs";
+@import "pages/subscribe";
+@import "pages/blog";
+@import "pages/pricing";
+@import "pages/contact";
+@import "pages/footer";

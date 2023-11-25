@@ -1,0 +1,163 @@
+// ===== Main page start start =====
+
+.home {
+  width: 100%;
+  background: url('../images/single-image.jpg') center/cover;
+  height: 800px;
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-47deg, #7c4fe0 0%, #4528dc 100%);
+    opacity: 0.9;
+    z-index: -1;
+  }
+
+  .banner {
+    padding-top: 100px;
+    max-width: 100%;
+
+    .banner-text {
+      max-width: 100%;
+
+      h1 {
+        @extend .pb-5;
+        max-width: 100%;
+        color: map-get($colors, light);
+        font-size: 60px;
+      }
+
+      p {
+        @extend .font-weight-500;
+        @extend .font-size-18;
+        max-width: 100%;
+        color: map-get($colors, light);
+        margin-bottom: 30px;
+        line-height: 2rem;
+      }
+    }
+
+    .banner-image img {
+      max-width: 100%;
+    }
+  }
+
+  // ===== Search button start =====
+  .search-line {
+    position: fixed;
+    bottom: 100%;
+    right: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-color: map-get($colors, dark);
+    opacity: 0.85;
+    transition: all 0.3s ease;
+
+    .search-form {
+      @extend .flex-container;
+      @extend .flex-column;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      text-align: center;
+      transform: translate(-50%, -50%);
+
+      input {
+        @extend .font-size-45;
+        @extend .font-weight-700;
+        color: map-get($colors, natural);
+        background: none !important;
+        border: 0 !important;
+        text-align: center;
+      }
+
+      span {
+        font-size: 16px;
+        color: #ccc;
+        display: inline-block;
+        width: 100%;
+      }
+    }
+
+    &.search-active {
+      bottom: 0;
+    }
+
+    .search-close {
+      padding: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: end;
+
+      .search-close-btn {
+        position: relative;
+        display: block;
+        z-index: 999;
+        width: 30px;
+        height: 30px;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        text-transform: none;
+        transition: all .3s;
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          width: 30px;
+          height: 2px;
+          background: #fff;
+        }
+
+        &::before {
+          top: 50%;
+          transform: rotate(135deg);
+        }
+
+        &::after {
+          bottom: calc(50% - 2px);
+          transform: rotate(45deg);
+        }
+
+        &:hover {
+          transform: rotate(180deg);
+
+          &::before,
+          &::after {
+            background: map-get($colors, primary);
+          }
+        }
+      }
+    }
+  }
+
+  // ===== Search button end =====
+}
+
+// ===== Arrow up start =====
+.stiky-arrow-up {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background: map-get($colors, dark);
+  color: map-get($colors, natural);
+  bottom: 20px;
+  left: 95%;
+  border-radius: 50%;
+}
+
+// ===== Arrow up end =====

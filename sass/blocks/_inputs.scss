@@ -1,0 +1,28 @@
+// Merce style for inputs on page
+.form-control {
+  @extend .font-size-14;
+  width: 100% !important;
+  padding: 16px 12px;
+  border: 1px solid map-get($colors, silvery);
+  color: map-get($colors, secondary);
+  border-radius: 6px;
+
+  &:focus {
+    border-color: map-get($colors, primary);
+    outline: 0;
+    box-shadow: 0 0 0 0 2rem rgba(0, 123, 255, 0.25);
+  }
+}
+
+.form-group {
+  @extend .mt-3;
+  @extend .mb-2;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}

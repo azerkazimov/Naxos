@@ -1,0 +1,75 @@
+// animated waves bottom of main banner
+
+.waves {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  margin: auto;
+  overflow: hidden;
+  height: 150px;
+  width: 100%;
+
+  .shape-one {
+    z-index: 15;
+    opacity: 0.5;
+  }
+
+  .shape-two {
+    z-index: 10;
+    opacity: 0.75;
+  }
+
+  .shape-three {
+    z-index: 5;
+  }
+
+  .waves-shape {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .wave {
+      position: absolute;
+      left: 0;
+      width: 200%;
+      height: 100%;
+      background-repeat: repeat no-repeat;
+      background-position: 0 bottom;
+      transform-origin: center bottom;
+    }
+
+    .wave-one {
+      background-image: url('../images/wave-1.png');
+      background-size: 50% 100px;
+    }
+
+    .wave-two {
+      background-image: url('../images/wave-2.png');
+      background-size: 50% 120px;
+      animation: waves 10s infinite linear;
+    }
+
+    .wave-three {
+      background-image: url('../images/wave-3.png');
+      background-size: 50% 100px;
+      animation: waves 15s infinite linear;
+    }
+  }
+}
+
+// infinite animation for scrolling waves
+@keyframes waves {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(0.55);
+  }
+
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}

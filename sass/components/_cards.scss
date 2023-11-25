@@ -1,0 +1,142 @@
+
+.card-single {
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.06);
+  padding: 50px;
+  text-align: center;
+  border-radius: 6px;
+  transition: all 0.3s;
+  transform: translateY(0);
+  .card-icon {
+    @extend .font-size-40;
+
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    color: map-get($colors, natural);
+    background-color: map-get($colors, primary);
+    text-align: center;
+    border-radius: 50%;
+    transition: all 0.3s;
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 40px;
+      height: 40px;
+      filter: brightness(0) invert(1);
+    }
+  }
+  h5 {
+    @extend .font-weight-700;
+
+    margin: 25px 0 15px;
+    text-align: center;
+    transition: all 0.3s;
+    color: #111;
+    line-height: 1.2;
+    font-size: 1.25rem;
+  }
+  p {
+    @extend .font-size-15;
+    @extend .font-weight-400;
+
+    text-align: center;
+    transition: all 0.3s;
+    line-height: 1.75;
+    margin: 0 0 1.6em;
+    color: map-get($colors, secondary);
+  }
+  &:hover {
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    background-color: map-get($colors, primary);
+    .card-icon {
+      background-color: map-get($colors, natural);
+      img {
+        filter: invert(21%) sepia(100%) saturate(2423%) hue-rotate(253deg)
+          brightness(92%) contrast(87%);
+      }
+    }
+    h5,
+    p {
+      color: map-get($colors, natural);
+    }
+  }
+}
+
+.card-overview {
+  @extend .py-4;
+  @extend .px-5;
+  @extend .mb-4;
+
+  position: relative;
+  background-color: map-get($colors, light);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.06);
+  border-radius: 6px;
+  transition: all 0.3s;
+  transform: translateX(0);
+  .card-icon {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    line-height: 80px;
+    color: map-get($colors, light);
+    background-color: map-get($colors, primary);
+    text-align: center;
+    border-radius: 50%;
+    transition: all 0.3s;
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 24px;
+      height: 24px;
+      filter: brightness(0) invert(1);
+    }
+  }
+  .overview-content {
+    @extend .px-4;
+
+    width: calc(100% - 60px);
+
+    transition: all 0.3s;
+    h6 {
+      @extend .font-weight-700;
+      @extend .my-1;
+
+      color: map-get($colors, dark);
+      line-height: 1.2;
+      font-size: 1.125em;
+    }
+    p {
+      @extend .font-weight-400;
+      @extend .font-size-15;
+
+      line-height: 1.75;
+      color: map-get($colors, secondary);
+    }
+  }
+  &:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    transform: translateX(-5px);
+    background-color: map-get($colors, primary);
+    .card-icon {
+      background-color: map-get($colors, light);
+
+      img {
+        filter: invert(21%) sepia(100%) saturate(2423%) hue-rotate(253deg)
+          brightness(92%) contrast(87%);
+      }
+    }
+    h6,
+    p {
+      color: map-get($colors, light);
+    }
+  }
+}

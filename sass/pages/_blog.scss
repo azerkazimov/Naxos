@@ -1,0 +1,107 @@
+.blog {
+    .blog-container {
+        position: relative;
+
+        .blog-image {
+            position: relative;
+
+            a {
+                display: block;
+                background: map-get($colors, natural);
+                border-radius: 6px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    opacity: 1;
+                    border-radius: 6px;
+                    transition: all 0.3s;
+                }
+            }
+
+            .blog-category {
+                @extend .font-size-14;
+                @extend .font-weight-bold;
+
+                position: absolute;
+                display: block;
+                left: 20px;
+                top: 20px;
+                margin: 0;
+                line-height: 14px;
+                color: map-get($colors, natural);
+                padding: 8px 12px;
+                border-radius: 6px;
+                background-color: rgba(0, 0, 0, 0.5);
+                transition: all 0.3s ease-in-out;
+            }
+        }
+
+        .blog-content {
+            @extend .pt-5;
+
+            .blog-date {
+                @extend .pb-5;
+                color: map-get($colors, secondary);
+            }
+
+            h4 {
+                @extend .mb-5;
+                @extend .font-size-30;
+                @extend .font-weight-700;
+
+                font-size: 30px;
+                color: map-get($colors, inky);
+                line-height: 1.2;
+                transition: all 0.3s ease;
+            }
+
+            .blog-about {
+                color: map-get($colors, secondary);
+                line-height: 1.75;
+            }
+
+            .blog-read {
+                color: map-get($colors, primary);
+                position: relative;
+                margin-left: 0;
+                transition: all 0.3s ease;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 0px;
+                    height: 2px;
+                    background-color: map-get($colors, inky);
+                    top: 50%;
+                    left: 0;
+                    transition: all 0.3s ease;
+                }
+
+            }
+        }
+
+        &:hover {
+            .blog-image img {
+                opacity: 0.7;
+                transform: scale(1.12);
+            }
+
+            .blog-category {
+                background-color: map-get($colors, primary);
+            }
+
+            .blog-content h4 {
+                color: map-get($colors, primary);
+            }
+            .blog-read{
+                padding-left: 22px;
+                color: map-get($colors, inky);
+
+                &::before{
+                    width: 15px;
+                }
+            }
+        }
+    }
+}

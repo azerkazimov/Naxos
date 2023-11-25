@@ -1,0 +1,37 @@
+.contact {
+    .contact-info {
+        .contact-info-header {
+            @extend .font-size-25;
+            @extend .font-weight-700;
+            @extend .flex-container;
+            @extend .flex-align-center;
+
+
+            .contact-info-icon {
+                width: 20px;
+                height: 20px;
+                @extend .flex-container;
+                @extend .flex-align-center;
+                @extend .mr-2;
+
+                img {
+                    width: 100%;
+                    filter: invert(21%) sepia(100%) saturate(2423%) hue-rotate(253deg) brightness(92%) contrast(87%);
+                }
+            }
+        }
+        p{
+            @extend .mt-2;
+            color: map-get($colors, secondary);
+        }
+        a{
+            @extend .mt-2;
+            color: map-get($colors, primary);
+            transition: all 0.3s ease;
+            &:hover{
+                    color: map-get($colors, inky);
+            }
+        }
+    }
+    
+}

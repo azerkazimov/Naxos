@@ -1,0 +1,57 @@
+// ===== Generate all flex classes =====
+
+@each $value in $flex-values {
+  .flex-justify-#{$value} {
+    justify-content: $value !important;
+  }
+
+  .flex-align-#{$value} {
+    align-items: $value !important;
+  }
+}
+
+// ===== generate responsive flex classes ======
+@each $breakpoint, $min-width in $breakpoints {
+  @each $value in $flex-values {
+    .flex-justify-#{$breakpoint}-#{$value} {
+      @media (min-width: $min-width) {
+        justify-content: $value !important;
+      }
+    }
+
+    .flex-align-#{$breakpoint}-#{$value} {
+      @media (min-width: $min-width) {
+        align-items: $value !important;
+      }
+    }
+  }
+}
+
+// ===== generate responsive offset classes =====
+@each $breakpoint, $min-width in $breakpoints {
+  @each $value in $offset-values {
+    $offset-class-name: unquote(".offset-#{$breakpoint}-#{$value}");
+
+    @if $breakpoint ==xs {
+      #{$offset-class-name} {
+        margin-left: percentage($value / 12);
+      }
+    }
+
+    @else {
+      @media (min-width: $min-width) {
+        #{$offset-class-name} {
+          margin-left: percentage($value / 12);
+        }
+      }
+    }
+  }
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}

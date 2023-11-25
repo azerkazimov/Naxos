@@ -1,0 +1,43 @@
+.counters {
+    background-image: url('../images/counters.jpg');
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center top !important;
+    background-size: cover;
+    overflow: hidden;
+    padding: 100px 0;
+    z-index: 0;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.75);
+        z-index: -1;
+    }
+
+    .counter {
+        @extend .my-4;
+
+        text-align: center;
+        color: map-get($colors, natural);
+
+        .icon img {
+            width: 50px;
+            filter: brightness(0) invert(1);
+        }
+
+        h5 {
+            @extend .font-weight-600;
+            @extend .font-size-45;
+            @extend .my-3;
+            text-align: center;
+            line-height: 45px;
+        }
+
+    }
+}

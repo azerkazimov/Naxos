@@ -1,0 +1,27 @@
+// bottom, left, right, top, x, y, all
+
+@each $key, $value in $spacers {
+  .p-#{$key} {
+    padding: $value !important;
+  }
+  .pt-#{$key} {
+    padding-top: $value !important;
+  }
+  .pb-#{$key} {
+    padding-bottom: $value !important;
+  }
+  .pr-#{$key} {
+    padding-right: $value !important;
+  }
+  .pl-#{$key} {
+    padding-left: $value !important;
+  }
+  .px-#{$key} {
+    padding-left: $value !important;
+    padding-right: $value !important;
+  }
+  .py-#{$key} {
+    padding-top: $value !important;
+    padding-bottom: $value !important;
+  }
+}

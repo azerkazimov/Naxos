@@ -1,0 +1,27 @@
+// bottom, left, right, top, x, y, all
+
+@each $key, $value in $spacers {
+  .m-#{$key} {
+    margin: $value !important;
+  }
+  .mt-#{$key} {
+    margin-top: $value !important;
+  }
+  .mb-#{$key} {
+    margin-bottom: $value !important;
+  }
+  .mr-#{$key} {
+    margin-right: $value !important;
+  }
+  .ml-#{$key} {
+    margin-left: $value !important;
+  }
+  .mx-#{$key} {
+    margin-left: $value !important;
+    margin-right: $value !important;
+  }
+  .my-#{$key} {
+    margin-top: $value !important;
+    margin-bottom: $value !important;
+  }
+}

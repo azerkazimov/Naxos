@@ -1,0 +1,42 @@
+.overview {
+  position: relative;
+  background-color: #fafbfe;
+  overflow: hidden;
+  padding-top: 100px;
+  z-index: 0;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 48%;
+    top: 50%;
+    width: 1200px;
+    height: 1000px;
+    background-color: #eef3fa;
+    border-radius: 120px;
+    transform: skew(-15deg) rotate(38deg) translateY(-50%);
+  }
+  .overview-image {
+    max-width: 100%;
+  }
+  .overview-list {
+    ul {
+      li {
+        p {
+          @extend .flex-container;
+          @extend .font-weight-400;
+          @extend .font-size-15;
+          line-height: 1.75;
+          margin: 0 0 1.6em;
+          color: map-get($colors, secondary);
+          i {
+            @extend .font-size-18;
+            font-weight: 900;
+            color: map-get($colors, primary);
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+}

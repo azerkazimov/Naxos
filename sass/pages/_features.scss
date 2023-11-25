@@ -1,0 +1,41 @@
+.features-content {
+  .feature-item {
+    width: 100%;
+  }
+  .feature-box {
+    @extend .mt-5;
+    .feature-box-icon {
+      width: 30%;
+      img {
+        width: 100%;
+        filter: invert(21%) sepia(100%) saturate(2423%) hue-rotate(253deg)
+          brightness(92%) contrast(87%);
+      }
+    }
+    .feature-box-text {
+      h4 {
+        @extend .mb-4;
+        @extend .font-weight-700;
+        color: #111;
+        line-height: 1.2;
+        font-size: 1.5em;
+        transition: all 0.3s ease;
+        &:hover {
+          color: #7c4fe0;
+        }
+      }
+      p {
+        @extend .mb-5;
+        line-height: 1.75;
+        margin: 0 0 1.6em;
+        color: #666;
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+      }
+    }
+  }
+  .feature-image img {
+    max-width: 100%;
+  }
+}

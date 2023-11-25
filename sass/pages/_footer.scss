@@ -1,0 +1,82 @@
+.footer {
+    position: relative;
+    clear: both;
+    color: #b0b0b0;
+    background: #1a191d;
+
+    .footer-widgets {
+        @extend .py-10;
+        .widget {
+        @extend .py-5;
+
+            position: relative;
+
+            h6 {
+                @extend .font-size-18;
+                @extend .mb-6;
+                @extend .font-weight-700;
+                color: map-get($colors, natural)
+            }
+
+            p {
+                @extend .py-5;
+                line-height: 1.75
+            }
+
+
+            .footer-sosial {
+                ul {
+                    @extend .flex-container;
+
+                    li {
+                        margin: 0 15px;
+                        color: map-get($colors, natural);
+                        transition: all 0.3s ease;
+
+                        &:hover {
+                            color: map-get($colors, primary);
+                        }
+
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+
+            .footer-menu {
+                @extend .font-weight-bold;
+
+                li {
+                    @extend .mb-2;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        color: map-get($colors, primary);
+                    }
+                }
+            }
+        }
+
+    }
+
+    .footer-copyright {
+        @extend .py-6;
+        position: relative;
+        clear: both;
+        border-top: 1px solid #222;
+        text-align: center;
+
+        .copyright {
+            a {
+                @extend .font-weight-600;
+                color: map-get($colors, natural);
+                transition: all 0.3s;
+
+                &:hover {
+                    color: map-get($colors, primary);
+                }
+            }
+        }
+    }
+}

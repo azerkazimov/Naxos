@@ -1,0 +1,69 @@
+// Merce class for all buttons on page
+.btn {
+  @extend .font-weight-500;
+  @extend .font-size-16;
+  background-color: map-get($colors, primary);
+  color: map-get($colors, light);
+  position: relative;
+  text-align: center;
+  padding: 14px 30px;
+  border: 0;
+  border-radius: 6px;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover,
+  :focus,
+  :active {
+    background-color: #5f36bb;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Button for subscribe section
+.btn-subscribe {
+  @extend .py-3;
+  width: 100%;
+}
+
+// Animated button for Blog section
+.btn-read-more {
+  @extend .mt-4;
+  @extend .font-weight-bold;
+  position: relative;
+  clear: both;
+  display: block;
+  transition: all 0.3s;
+}
+
+// Styled buttons for (Google & iOS) store
+.button-store {
+  .custom-btn {
+    @extend .px-3;
+    @extend .py-1;
+    @extend .mr-3;
+    @extend .font-weight-500;
+    width: 180px;
+    height: 62px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    font-size: 12px;
+    color: map-get($colors, light);
+    transition: all 0.3s ease;
+
+    i {
+      @extend .font-size-28;
+    }
+
+    span {
+      @extend .font-size-18;
+      @extend .font-weight-700;
+      display: block;
+    }
+
+    &:hover {
+      background-color: map-get($colors, light);
+      color: #7c4fe0;
+    }
+  }
+}

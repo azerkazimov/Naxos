@@ -1,0 +1,80 @@
+.team {
+
+    .team-member {
+        @extend .m-1;
+        text-align: center;
+        position: relative;
+        background-color: #fff;
+
+        .team-img {
+            position: relative;
+            overflow: hidden;
+            border-radius: 6px;
+
+            img {
+                border-radius: 6px;
+                object-fit: cover;
+                width: 100%;
+                transform: scale(1);
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .team-sosial {
+                position: absolute;
+                background-color: rgba(124, 79, 224, 0.85);
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                text-align: center;
+                opacity: 0;
+                transform: translateY(10px);
+                transition: all 0.3s;
+
+                &:hover {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+
+                .team-sosial-inner {
+                    @extend .flex-container;
+                    @extend .flex-justify-space-around;
+                    position: absolute;
+                    width: 100%;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    i {
+                        color: map-get($colors, natural);
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            .team-img img {
+                transform: scale(1.12);
+            }
+
+            .team-detail h5 {
+                color: map-get($colors, primary)
+            }
+        }
+
+        .team-detail {
+            h5 {
+                @extend .font-weight-600;
+                @extend .font-size-16;
+                @extend .mt-2;
+                transition: all 0.3s;
+                cursor: pointer;
+            }
+
+            span {
+                @extend .mt-1;
+                display: block;
+                color: map-get($colors, silvery);
+            }
+        }
+    }
+}

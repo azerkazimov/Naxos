@@ -1,0 +1,69 @@
+.subscribe {
+    @extend .pb-5;
+    background-image: url("../images/subscribe.jpg");
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    overflow: hidden;
+    z-index: 0;
+    color: map-get($colors, natural);
+  
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.75);
+      z-index: -1;
+    }
+  
+    .subscribe-form-content {
+      .subscribe-result {
+        @extend .my-5;
+        @extend .font-size-30;
+        text-align: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.6s ease;
+      }
+  
+      .privacy-policy {
+        @extend .font-size-16;
+        text-align: center;
+        line-height: 1.75;
+  
+        a {
+          @extend .font-weight-bolder;
+          color: map-get($colors, primary);
+          transition: all 0.3s ease;
+  
+          &:hover {
+            color: map-get($colors, natural);
+          }
+        }
+      }
+  
+      &.show-result {
+        .subscribe-result {
+          max-height: 300px;
+          animation: fade 1s ease-in-out;
+        }
+      }
+    }
+    @keyframes fade {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+  }
+  

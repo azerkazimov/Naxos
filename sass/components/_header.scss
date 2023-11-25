@@ -1,0 +1,170 @@
+// nav bar section sticky style
+.header {
+  position: fixed;
+  padding: 40px 20px;
+  background: transparent;
+  transition: all 0.9s ease;
+  width: 100%;
+  z-index: 200;
+
+  // style for sticky nav-bar section
+  &.sticky {
+    z-index: 799;
+    padding: 20px;
+    background-color: map-get($colors, natural);
+
+    // change link items design on nav-bar scroll 
+    .header-nav-link {
+      span {
+        position: relative;
+        color: map-get($colors, inky);
+        transition: 0.3s ease;
+
+        &::after {
+          background-color: #000 !important;
+        }
+
+        &:hover {
+          color: map-get($colors, primary);
+        }
+      }
+
+      i {
+        color: map-get($colors, inky);
+
+        &:hover {
+          color: map-get($colors, primary);
+        }
+      }
+    }
+
+    // generate Burger menu for responsive nav-bar
+    .burger-menu {
+
+      .burger-menu-bar,
+      &::before,
+      &::after {
+        background-color: #000 !important;
+      }
+    }
+  }
+
+  .header-main-menu {
+    .header-nav-link {
+      padding: 10px 20px;
+      color: #fff;
+
+      span {
+        font-weight: 500;
+        overflow: hidden;
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: "";
+          left: 0;
+          bottom: -2px;
+          width: 0%;
+          height: 1px;
+          background-color: #fff;
+          opacity: 0.4;
+          transition: all 0.3s;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+
+    // ===BURGER-MENU===
+    .burger-menu {
+      position: relative;
+      height: 30px;
+      width: 35px;
+
+      .burger-menu-bar {
+        position: absolute;
+        height: 3px;
+        width: 35px;
+        background-color: #fff;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 35px;
+        height: 3px;
+        top: 0;
+        background-color: #fff;
+        transition: 0.3s;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 35px;
+        height: 3px;
+        bottom: 0;
+        background-color: #fff;
+        transition: 0.3s;
+      }
+
+      &.is-active {
+        position: fixed;
+        z-index: 99;
+
+        &::before {
+          background-color: #111;
+          z-index: 99;
+          transform: rotate(-45deg) translate(-9px, 9px);
+        }
+
+        &::after {
+          background-color: #111;
+          z-index: 99;
+          transform: rotate(45deg) translate(-10px, -11px);
+        }
+
+        .burger-menu-bar {
+          opacity: 0;
+        }
+      }
+    }
+
+    // pull-out mobile menu on the right when you press the burger menu
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      right: 100%;
+      display: block;
+      width: 100%;
+      height: 100vh;
+      background-color: #fff;
+      z-index: 98;
+      padding: 20px 30px;
+      transition: all 0.4s ease;
+
+      li {
+        @extend .py-2;
+
+        span {
+          @extend .font-weight-500;
+          @extend .font-size-16;
+          color: #111111;
+          transition: all 0.3s ease;
+
+          &:hover {
+            color: #7c4fe0;
+          }
+        }
+      }
+
+      &.is-active {
+        right: 0;
+      }
+    }
+  }
+}

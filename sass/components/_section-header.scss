@@ -1,0 +1,57 @@
+// styled header for all section
+.section-header,
+.section-header-white {
+  @extend .flex-container;
+  @extend .flex-column;
+  @extend .flex-justify-center;
+  @extend .flex-align-center;
+  @extend .my-5;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+
+  h2 {
+    @extend .pb-3;
+    font-size: 2.25rem;
+  }
+
+  p {
+    @extend .font-size-18;
+    color: map-get($colors, silvery);
+  }
+}
+
+// styled header for dark section
+.section-header-white {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  h2,
+  p {
+    color: map-get($colors, light) !important;
+  }
+}
+
+// Styled header title for item on page
+.section-title {
+  @extend .flex-container;
+  @extend .flex-column;
+  @extend .flex-justify-start;
+  @extend .flex-align-start;
+  @extend .my-5;
+  width: 100%;
+  margin: 0 auto;
+
+  h3 {
+    @extend .pb-3;
+    font-size: 2.25em;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.75;
+    color: map-get($colors, silvery);
+  }
+}

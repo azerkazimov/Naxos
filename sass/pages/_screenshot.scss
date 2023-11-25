@@ -1,0 +1,54 @@
+.screenshots {
+    .screenshot-track {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: calc((100% / 4));
+        overflow: hidden;
+        text-align: center;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scrollbar-width: 0;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .screenshot-pic {
+            scroll-snap-align: start;
+            transition: all 0.3s ease;
+            width: 300px;
+            padding: 15px;
+            border: transparent;
+        }
+    }
+
+    .no-transition {
+        scroll-behavior: auto;
+    }
+
+    .dragging {
+        cursor: grab;
+        user-select: none;
+        scroll-behavior: auto;
+        scroll-snap-type: none;
+    }
+
+    .dots {
+        @extend .flex-container;
+        @extend .flex-justify-center;
+        text-align: center;
+
+        .dot {
+            @extend .mx-1;
+            width: 10px;
+            height: 10px;
+            border: 1px solid map-get($colors, primary);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .active-dot{
+            background-color: map-get($colors, primary);
+        }
+    }
+}

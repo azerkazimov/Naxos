@@ -1,0 +1,134 @@
+.pricing {
+    background-color: map-get($colors, light);
+
+    .price-container {
+        @extend .py-5;
+
+        position: relative;
+        background-color: map-get($colors, natural);
+        box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.06);
+        border-radius: 6px;
+        text-align: center;
+        transform: translateY(0);
+        transition: all 0.3s;
+
+        .price-icon {
+            @extend .my-5;
+
+            display: inline-block;
+            width: 54px;
+            height: 54px;
+
+            img {
+                width: 100%;
+                filter: invert(21%) sepia(100%) saturate(2423%) hue-rotate(253deg) brightness(92%) contrast(87%);
+            }
+        }
+
+        .plan-type {
+            @extend .mb-2;
+            @extend .font-size-30;
+            @extend .font-weight-700;
+
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .plan-price {
+            @extend .mb-4;
+            @extend .font-size-24;
+            @extend .font-weight-300;
+
+            line-height: 24px;
+            text-align: center;
+        }
+
+        .plan-list {
+            @extend .mb-8;
+
+            text-align: center;
+
+            li {
+                @extend .p-2;
+                color: map-get($colors, secondary);
+            }
+        }
+
+        &:hover {
+            box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+
+            .plan-type {
+                color: map-get($colors, primary);
+            }
+        }
+    }
+
+    .plan-popular {
+        position: relative;
+        z-index: 2;
+        box-shadow: 0 0 35px 0 rgba(0, 0, 0, .15);
+        margin: -66px -38px;
+        padding: 90px 0 !important;
+        border-bottom: 2px solid map-get($colors, primary);
+
+        &:hover {
+            box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.3);
+            transform: translateY(-6px);
+        }
+
+        .card-ribbon {
+            position: absolute;
+            overflow: hidden;
+            top: -10px;
+            left: -10px;
+            width: 114px;
+            height: 114px;
+            z-index: 9;
+
+            span {
+                position: absolute;
+                display: block;
+                width: 165px;
+                padding: 9px 0;
+                background-color: #333;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+                color: #fff;
+                text-align: center;
+                left: -37px;
+                top: 21px;
+                transform: rotate(-45deg);
+            }
+
+            &::before,
+            &::after {
+                position: absolute;
+                z-index: -1;
+                content: '';
+                display: block;
+                border: 5px solid #000;
+                border-top-color: transparent;
+                border-left-color: transparent;
+            }
+
+            &::before {
+                top: -1px;
+                right: 1px;
+            }
+
+            &::after {
+                bottom: 2px;
+                left: 0;
+            }
+        }
+    }
+
+    .mobile-phone {
+        padding-top: 120px;
+        margin-bottom: -150px;
+
+        img {
+            max-width: 100%;
+        }
+    }
+}
