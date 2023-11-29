@@ -7,6 +7,7 @@
 @import "core/flex";
 @import "core/colors";
 @import "core/typography";
+@import "core/responsive";
 
 // import blocks
 @import "blocks/buttons";
@@ -19,7 +20,6 @@
 @import "components/bounce";
 @import "components/slider";
 @import "components/section-header";
-@import "components/responsive";
 
 // import pages
 @import "pages/main";

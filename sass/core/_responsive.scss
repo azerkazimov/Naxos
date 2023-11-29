@@ -34,15 +34,6 @@
       }
     }
   }
-
-  .testimonial-clients-track,
-  .client-slider-track {
-    grid-auto-columns: calc((100% / 2)) !important;
-  }
-
-  .screenshot-track {
-    grid-auto-columns: calc((100% / 1)) !important;
-  }
 }
 
 @media screen and (max-width: 767px) {
@@ -101,10 +92,6 @@
     grid-auto-columns: calc((100% / 3)) !important;
   }
 
-  .user-pic {
-    width: 100% !important;
-  }
-
   .screenshot-track {
     grid-auto-columns: calc((100% / 2)) !important;
   }
@@ -138,10 +125,6 @@
 @media (min-width: 993px) {
   .burger-menu {
     display: none;
-  }
-
-  .user-pic {
-    width: 100% !important;
   }
 }
 

@@ -2000,6 +2000,112 @@ a {
   font-weight: 1000 !important;
 }
 
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  .banner {
+    overflow: hidden;
+  }
+  .banner .banner-text {
+    display: inline-block;
+  }
+  .banner .banner-text h1 {
+    font-size: 50px !important;
+  }
+  .banner .banner-text p {
+    max-width: 100% !important;
+  }
+  .banner .button-store {
+    max-width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center;
+  }
+  .banner .button-store .custom-btn {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .feature-box .feature-box-icon {
+    width: 20% !important;
+  }
+  .contact-info {
+    text-align: center;
+  }
+  .contact-info .contact-info-header {
+    justify-content: center;
+  }
+  .footer {
+    text-align: center;
+  }
+  .footer .footer-sosial ul {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer .widget .button-store {
+    display: inline-block !important;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px !important;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px !important;
+  }
+  .burger-menu {
+    display: block;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .testimonial-clients-track,
+  .client-slider-track {
+    grid-auto-columns: 33.3333333333% !important;
+  }
+  .screenshot-track {
+    grid-auto-columns: 50% !important;
+  }
+  .plan-popular {
+    margin: 60px 0px !important;
+  }
+  .home {
+    height: 1164px !important;
+  }
+  .header-nav-item,
+  .d-none {
+    display: none;
+  }
+  .button-store {
+    justify-content: center;
+  }
+  .banner-text {
+    text-align: center;
+  }
+  .stiky-arrow-up {
+    left: 88% !important;
+  }
+}
+@media (min-width: 993px) {
+  .burger-menu {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1160px !important;
+  }
+  .screenshot-pic {
+    width: 300px !important;
+  }
+}
 .btn {
   background-color: #7c4fe0;
   color: #f7f7f7;
@@ -2460,125 +2566,6 @@ a {
   color: #999;
 }
 
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px !important;
-  }
-}
-@media screen and (max-width: 576px) {
-  .banner {
-    overflow: hidden;
-  }
-  .banner .banner-text {
-    display: inline-block;
-  }
-  .banner .banner-text h1 {
-    font-size: 50px !important;
-  }
-  .banner .banner-text p {
-    max-width: 100% !important;
-  }
-  .banner .button-store {
-    max-width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center;
-  }
-  .banner .button-store .custom-btn {
-    margin-bottom: 10px;
-  }
-  .testimonial-clients-track,
-  .client-slider-track {
-    grid-auto-columns: 50% !important;
-  }
-  .screenshot-track {
-    grid-auto-columns: 100% !important;
-  }
-}
-@media screen and (max-width: 767px) {
-  .feature-box .feature-box-icon {
-    width: 20% !important;
-  }
-  .contact-info {
-    text-align: center;
-  }
-  .contact-info .contact-info-header {
-    justify-content: center;
-  }
-  .footer {
-    text-align: center;
-  }
-  .footer .footer-sosial ul {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
-  .footer .widget .button-store {
-    display: inline-block !important;
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px !important;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px !important;
-  }
-  .burger-menu {
-    display: block;
-    max-width: 100%;
-  }
-}
-@media screen and (max-width: 992px) {
-  .testimonial-clients-track,
-  .client-slider-track {
-    grid-auto-columns: 33.3333333333% !important;
-  }
-  .user-pic {
-    width: 100% !important;
-  }
-  .screenshot-track {
-    grid-auto-columns: 50% !important;
-  }
-  .plan-popular {
-    margin: 60px 0px !important;
-  }
-  .home {
-    height: 1164px !important;
-  }
-  .header-nav-item,
-  .d-none {
-    display: none;
-  }
-  .button-store {
-    justify-content: center;
-  }
-  .banner-text {
-    text-align: center;
-  }
-  .stiky-arrow-up {
-    left: 88% !important;
-  }
-}
-@media (min-width: 993px) {
-  .burger-menu {
-    display: none;
-  }
-  .user-pic {
-    width: 100% !important;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1160px !important;
-  }
-  .screenshot-pic {
-    width: 300px !important;
-  }
-}
 .home {
   width: 100%;
   background: url("../images/single-image.jpg") center/cover;
