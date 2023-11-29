@@ -1,5 +1,7 @@
 .pricing {
     background-color: map-get($colors, light);
+    position: relative;
+    z-index: 0;
 
     .price-container {
         @extend .py-5;
@@ -11,6 +13,7 @@
         text-align: center;
         transform: translateY(0);
         transition: all 0.3s;
+        z-index: 0;
 
         .price-icon {
             @extend .my-5;

@@ -35,6 +35,18 @@ searchCloseBtn.addEventListener("click", () => {
   searchContainer.classList.remove("search-active");
 });
 
+// Paralax video pop-up
+
+const popup = document.querySelector(".video-btn");
+const popupCloseBtn = document.querySelector(".popup-close-btn");
+const popupContainer = document.querySelector(".pop-up");
+popup.addEventListener("click", (e) => {
+  e.preventDefault();
+  popupContainer.classList.add("popup-active");
+});
+popupCloseBtn.addEventListener("click", () => {
+  popupContainer.classList.remove("popup-active");
+});
 
 // Subscribe confirm
 document.addEventListener("click", function () {
